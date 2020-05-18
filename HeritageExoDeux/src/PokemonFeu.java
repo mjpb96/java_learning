@@ -1,19 +1,29 @@
-public class PokemonFeu extends pokemon  {
+public class PokemonFeu extends Pokemon  {
 
-    public PokemonFeu(String nom0, int hp0, int atk0) {
-        super(nom0, hp0, atk0);
+    public PokemonFeu(String nom, int hp, int atk) {
+        super(nom, hp, atk);
     }
 
 
     @Override
-    public void attaquer(pokemon p){
-        double efficace = 2;
-        double inefficace = 0.5;
+    public void attaquer(Pokemon p){
 
-        if ((p.getClass().getName()) == "PokemonPlante"){
-
+        String typeCible = p.getClass().getSimpleName();
+        if (typeCible == "PokemonPlante"){
+            p.setHp((p.getHp()) - (this.getAtk()*2));
+        }
+        else if (typeCible == "PokemonEau" || typeCible == "PokemonFeu"){
+            p.setHp((p.getHp()) - (this.getAtk()/2));
+        }
+        else {
+            p.setHp((p.getHp()) - (this.getAtk()));
         }
 
+    }
+
+
+    public String ToString(){
+        return "Le nom du pokemon est :" + this.getNom() + "de type feu" + "\n PV :" + this.getHp() + "\n Point d'attaque : " + this.getAtk();
     }
 
 }

@@ -1,39 +1,39 @@
-public class pokemon {
-    public static String nom;
-    public static int hp;
-    public static int atk;
+public class Pokemon {
+    protected int hp;
+    protected String nom;
+    protected int atk;
 
-    public pokemon(String nom0, int hp0, int atk0) {
-        nom = nom0;
-        hp = hp0;
-        atk = atk0;
+    public Pokemon(String nom, int hp, int atk) {
+        this.nom = nom;
+        this.hp = hp;
+        this.atk = atk;
     }
 
-    public static String getNom() {
+    public String getNom() {
         return nom;
     }
 
-    public static int getHp() {
+    public int getHp() {
         return hp;
     }
 
-    public static int getAtk() {
+    public int getAtk() {
         return atk;
     }
 
-    public static void setNom(String nom) {
-        pokemon.nom = nom;
+    public void setNom(String nom) {
+        Pokemon.nom = nom;
     }
 
-    public static void setHp(int hp) {
-        pokemon.hp = hp;
+    public void setHp(int hp) {
+        Pokemon.hp = hp;
     }
 
-    public static void setAtk(int atk) {
-        pokemon.atk = atk;
+    public void setAtk(int atk) {
+        Pokemon.atk = atk;
     }
 
-    public static boolean isDead(){
+    public boolean isDead(){
         if (hp == 0){
             return true;
         } else{
@@ -41,7 +41,7 @@ public class pokemon {
         }
     }
 
-    public void attaquer(pokemon p){
+    public void attaquer(Pokemon p){
         p.setHp((p.getHp()) - (this.getAtk()));
     }
 
