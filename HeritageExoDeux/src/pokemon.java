@@ -1,7 +1,14 @@
+/**
+ * Classe définissant un Pokemon
+ * @author Marc Baribaud
+ * @version 0.03
+ *
+ */
+
 public class Pokemon {
-    protected int hp;
-    protected String nom;
-    protected int atk;
+    private int hp;
+    private String nom;
+    private int atk;
 
     public Pokemon(String nom, int hp, int atk) {
         this.nom = nom;
@@ -9,38 +16,27 @@ public class Pokemon {
         this.atk = atk;
     }
 
-    public String getNom() {
-        return nom;
-    }
+    public String getNom() { return nom;}
 
-    public int getHp() {
-        return hp;
-    }
+    public int getHp() { return hp;}
 
-    public int getAtk() {
-        return atk;
-    }
+    public int getAtk() { return atk;}
 
-    public void setNom(String nom) {
-        Pokemon.nom = nom;
-    }
+    public void setNom(String nom) { this.nom = nom;}
 
-    public void setHp(int hp) {
-        Pokemon.hp = hp;
-    }
+    public void setHp(int hp) { this.hp = hp;}
 
-    public void setAtk(int atk) {
-        Pokemon.atk = atk;
-    }
+    public void setAtk(int atk) { this.atk = atk;}
 
     public boolean isDead(){
-        if (hp == 0){
-            return true;
-        } else{
-            return false;
-        }
+        if (hp == 0){ return true;}
+        else{ return false;}
     }
 
+    /**
+     * Méthode servant à attaquer un Pokemon
+     * @param p : p à attaquer.
+     */
     public void attaquer(Pokemon p){
         p.setHp((p.getHp()) - (this.getAtk()));
     }

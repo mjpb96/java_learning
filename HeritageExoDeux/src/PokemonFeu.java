@@ -1,3 +1,11 @@
+/**
+ * Classe définissant un Pokemon de type Feu
+ * @author Marc Baribaud
+ * @version 0.03
+ *
+ */
+
+
 public class PokemonFeu extends Pokemon  {
 
     public PokemonFeu(String nom, int hp, int atk) {
@@ -20,7 +28,6 @@ public class PokemonFeu extends Pokemon  {
         }
 
     }
-
 
     public String ToString(){
         return "Le nom du pokemon est :" + this.getNom() + "de type feu" + "\n PV :" + this.getHp() + "\n Point d'attaque : " + this.getAtk();
