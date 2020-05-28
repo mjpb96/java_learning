@@ -6,8 +6,8 @@
  */
 
 public class Pokemon {
-    private int hp;
     private String nom;
+    private int hp;
     private int atk;
 
     public Pokemon(String nom, int hp, int atk) {
@@ -29,8 +29,7 @@ public class Pokemon {
     public void setAtk(int atk) { this.atk = atk;}
 
     public boolean isDead(){
-        if (hp == 0){ return true;}
-        else{ return false;}
+        return this.hp == 0;
     }
 
     /**
