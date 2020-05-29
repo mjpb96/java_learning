@@ -1,8 +1,14 @@
-
+package personne;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/**
+ * Classe définissant une personne qui implémente l'interface IPersonne
+ *
+ * @author Marc Baribaud
+ * @version 0.02
+ */
 public class Personne implements IPersonne {
 
     private int id;

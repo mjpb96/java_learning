@@ -1,6 +1,13 @@
-import java.util.Calendar;
-import java.util.Date;
+package personne;
 
+import java.util.Calendar;
+
+/**
+ * Classe définissant l'application
+ *
+ * @author Marc Baribaud
+ * @version 0.02
+ */
 public class Application {
 
     public static void main(String[] args){

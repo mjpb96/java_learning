@@ -1,24 +1,40 @@
+package vehicule;
+
 /**
  * Classe définissant un véhicule
+ *
  * @author Marc Baribaud
- * @version 0.01
+ * @version 0.02
  */
-
 public abstract class Vehicule {
 
-    private int matricule, annee;
-    private int count = 0;
+    // Ceci est une variable de class
+    private static int matricule = 0;
+
+    // Ce sont des variables d'instance
+    private int annee;
     private String modele;
     private double prix;
 
-    public Vehicule(){
-        count++;
+    public Vehicule() {
+        matricule ++;
+        System.out.println("Je construis un véhicule");
     }
 
+    /**
+     * Retourne le matricule du véhicule
+     *
+     * @return le matricule du véhicule
+     */
     public int getMatricule() {
         return matricule;
     }
 
+    /**
+     * Définit le matricule du véhicule
+     *
+     * @param matricule matricule du véhicule
+     */
     public void setMatricule(int matricule) {
         this.matricule = matricule;
     }
@@ -29,14 +45,6 @@ public abstract class Vehicule {
 
     public void setAnnee(int annee) {
         this.annee = annee;
-    }
-
-    public int getCount() {
-        return count;
-    }
-
-    public void setCount(int count) {
-        this.count = count;
     }
 
     public String getModele() {
@@ -56,11 +64,12 @@ public abstract class Vehicule {
     }
 
     public abstract void demarrer();
+
     public abstract void accelerer();
 
     @Override
     public String toString() {
-        return "Matricule : " + matricule
+        return "Matricule : IS XC2 " + matricule
                 + " | Annee : " + annee
                 + " | Modèle : " + modele
                 + " | Prix : " + prix;
